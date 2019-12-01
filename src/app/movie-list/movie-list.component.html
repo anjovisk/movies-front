@@ -1,0 +1,18 @@
+<section class="movie-list">
+  <section>
+      <input [(ngModel)]="queryValue" placeholder="Nome do filme...">
+      <button (click)="searchMovie()">Buscar</button>
+  </section>
+  <ul class="movie-list__ul">
+    <li *ngFor="let movie of movies; let i = index" class="movie-list__ul__li">
+      <a [routerLink]="['/movies', movie.id]" routerLinkActive="active">
+        <article class="movie-list__ul__li_movie">
+            <div class="movie-list__ul__li_movie__image">
+                <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{movie.poster_path}}"/>
+            </div>
+            <h5>{{movie.title}}</h5>
+        </article>
+      </a>
+    </li>
+  </ul>
+</section>

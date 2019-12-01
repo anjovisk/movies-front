@@ -1,0 +1,32 @@
+.movie-details
+    background: red
+    height: 400px;
+    &__articlebox
+        &__image
+            float: left;
+            background: rebeccapurple;
+            margin-left: 10px;
+            margin-right: 20px;
+            width: 200px;
+            height: 400px;
+            position: relative;
+            > img
+                max-height: 100%;
+                max-width: 100%;
+                width: auto;
+                height: auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+        &__description
+            background: pink;
+            float: left;
+            max-width: 400px;
+            > div
+                background: yellow;
+                > p
+                    display: inline;
+                    word-break: break-all;

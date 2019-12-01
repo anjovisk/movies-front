@@ -1,0 +1,15 @@
+<main class="movie-details">
+  <article *ngIf="movie" itemscope itemtype="http://schema.org/Movie" class="movie-details__articlebox">
+      <section class="movie-details__articlebox__image">
+          <img itemprop="image" itemprop="image" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{movie.poster_path}}"/>
+      </section>
+      <section class="movie-details__articlebox__description">
+              <h5 itemprop="name">{{movie.title}}</h5>
+              <div>
+                  <p itemprop="description">
+                      {{movie.overview}}
+                  </p>
+              </div>
+      </section>
+  </article>
+</main>

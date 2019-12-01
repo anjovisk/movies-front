@@ -1,0 +1,42 @@
+.movie-list
+    background: yellow
+    &__ul
+        list-style: none;
+        text-align: center;
+        &__li
+            margin: 0px 20px;
+            display: inline-block;
+            &__movie
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                background: gray;
+                min-width: 300px;
+                width: 200px;
+                height: 400px;
+                &__image
+                    background: rebeccapurple;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 10px;
+                    width: 180px;
+                    height: 300px;
+                    position: relative;
+                    > img
+                        max-height: 100%;
+                        max-width: 100%;
+                        width: auto;
+                        height: auto;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                > h5
+                    margin-bottom: 10px;
+                > span
+                    margin-bottom: 10px;
+    
+        
+    
