@@ -21,7 +21,7 @@ export class MovieDetailsComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.pipe(
       switchMap((params: ParamMap) =>
-        this.apiService.getMovie(params.get('id'), params.get('apiKey')))
+        this.apiService.getMovie(params.get('id')))
     ).subscribe(movie => this.movie = movie);
   }
 

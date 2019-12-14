@@ -15,14 +15,14 @@ export class ApiService {
   constructor(private httpClient: HttpClient) { }
 
   public listPopularMovies(pageNumber: number) {
-    return this.httpClient.get<Page>(`${this.popularMoviesURL}?${this.apiKey}&page=${pageNumber}`)
+    return this.httpClient.get<Page>(`${this.popularMoviesURL}?api_key=${this.apiKey}&page=${pageNumber}`)
   }
 
   public searchMovies(query: string, pageNumber: number) {
-    return this.httpClient.get<Page>(`${this.searchMovieURL}?${this.apiKey}&query=${query}&page=${pageNumber}`)
+    return this.httpClient.get<Page>(`${this.searchMovieURL}?api_key=${this.apiKey}&query=${query}&page=${pageNumber}`)
   }
 
   public getMovie(id: string) {
-    return this.httpClient.get<Movie>(`${this.singleMovieURL}/${id}?${this.apiKey}`)
+    return this.httpClient.get<Movie>(`${this.singleMovieURL}/${id}?api_key=${this.apiKey}`)
   }
 }
